@@ -36,6 +36,13 @@ Grey dark 3: #999
     --line: 1px solid var(--color-grey-light-2);
 }
 
+
+$bp-largest: 75em; //1200/16=75
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em; //600/16=37.5
+$bp-smallest: 31.25em; //600/16=37.5
+
 * {
 
     margin: 0;
@@ -52,6 +59,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     // this sets the default font size to 10 as 62.5% of 16px is 10 which now creates 1rem equal to the 10px.
+
+    @media only screen and (max-width:$bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
